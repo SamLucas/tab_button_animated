@@ -1,19 +1,20 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import styled from "styled-components/native";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
-  );
-}
+const Container = styled.View`
+  flex: 1;
+  justify-content: flex-end;
+  background-color: #ea3345;
+`;
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+import TabBar from "./src/components/tabBar";
+
+const App: React.FC = () => (
+  <Container>
+    <TabBar />
+  </Container>
+);
+
+export default App;
+
+console.ignoredYellowBox = true;
